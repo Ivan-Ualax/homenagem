@@ -12,7 +12,6 @@
 
 <style>
 
-
 *{
 box-sizing:border-box;
 }
@@ -35,9 +34,13 @@ align-items:center;
 
 justify-content:center;
 
-overflow:hidden;
+overflow-x:hidden;
+
+overflow-y:auto;
 
 color:white;
+
+padding:15px;
 
 }
 
@@ -69,6 +72,7 @@ opacity:.15;
 animation:move 10s linear infinite;
 
 }
+
 
 
 @keyframes move{
@@ -128,6 +132,7 @@ text-align:center;
 
 
 
+
 /* tela inicial */
 
 .start{
@@ -155,6 +160,8 @@ flex-direction:column;
 
 z-index:10;
 
+padding:20px;
+
 }
 
 
@@ -166,6 +173,8 @@ font-size:35px;
 color:#00eaff;
 
 }
+
+
 
 
 
@@ -196,6 +205,8 @@ box-shadow:
 0 0 30px #00eaff;
 
 
+transition:.3s;
+
 }
 
 
@@ -205,6 +216,7 @@ button:hover{
 transform:scale(1.05);
 
 }
+
 
 
 
@@ -249,7 +261,10 @@ linear-gradient(90deg,#00eaff,#ff4ecd);
 
 color:transparent;
 
+line-height:1.2;
+
 }
+
 
 
 
@@ -275,6 +290,12 @@ overflow:hidden;
 white-space:nowrap;
 
 margin:25px 0;
+
+height:70px;
+
+display:flex;
+
+align-items:center;
 
 }
 
@@ -323,6 +344,7 @@ transform:translateX(-100%);
 
 
 
+
 /* fotos */
 
 .memoria{
@@ -346,7 +368,14 @@ box-shadow:
 0 0 40px rgba(0,238,255,.3);
 
 
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
 }
+
 
 
 
@@ -409,6 +438,8 @@ transform:scale(1);
 
 
 
+
+
 .texto{
 
 margin-top:30px;
@@ -420,6 +451,8 @@ line-height:1.8;
 color:#ddd;
 
 }
+
+
 
 
 
@@ -449,6 +482,7 @@ color:#00eaff;
 
 
 
+
 audio{
 
 display:none;
@@ -458,31 +492,43 @@ display:none;
 
 
 
-@media(max-width:600px){
+
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+
+@media(max-width:800px){
+
+
+.container{
+
+max-width:700px;
+
+padding:25px;
+
+}
+
 
 
 h1{
 
-font-size:38px;
+font-size:42px;
 
 }
+
 
 
 .memoria{
 
-height:430px;
+height:500px;
 
 }
+
 
 
 .texto{
-
-font-size:18px;
-
-}
-
-
-.mensagem span{
 
 font-size:20px;
 
@@ -492,6 +538,207 @@ font-size:20px;
 }
 
 
+
+
+
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+
+@media(max-width:600px){
+
+
+body{
+
+padding:10px;
+
+align-items:flex-start;
+
+}
+
+
+
+.container{
+
+width:100%;
+
+padding:20px;
+
+border-radius:25px;
+
+margin-top:20px;
+
+}
+
+
+
+.start{
+
+border-radius:25px;
+
+}
+
+
+
+.logo{
+
+font-size:55px;
+
+}
+
+
+
+.start h2{
+
+font-size:26px;
+
+}
+
+
+
+button{
+
+width:90%;
+
+max-width:300px;
+
+font-size:18px;
+
+padding:15px 20px;
+
+}
+
+
+
+h1{
+
+font-size:34px;
+
+}
+
+
+
+.status{
+
+font-size:14px;
+
+}
+
+
+
+.mensagem{
+
+height:60px;
+
+margin:20px 0;
+
+}
+
+
+
+.mensagem span{
+
+font-size:20px;
+
+animation:
+
+slide 55s linear infinite;
+
+}
+
+
+
+
+
+.memoria{
+
+height:420px;
+
+border-radius:20px;
+
+}
+
+
+
+.texto{
+
+font-size:17px;
+
+line-height:1.6;
+
+}
+
+
+
+.ai{
+
+font-size:14px;
+
+padding:12px;
+
+}
+
+
+
+}
+
+
+
+
+
+
+/* ========================= */
+/* CELULARES PEQUENOS */
+/* ========================= */
+
+
+@media(max-width:380px){
+
+
+
+h1{
+
+font-size:28px;
+
+}
+
+
+
+.logo{
+
+font-size:45px;
+
+}
+
+
+
+.memoria{
+
+height:350px;
+
+}
+
+
+
+.mensagem span{
+
+font-size:17px;
+
+}
+
+
+
+.texto{
+
+font-size:16px;
+
+}
+
+
+
+}
 
 </style>
 
